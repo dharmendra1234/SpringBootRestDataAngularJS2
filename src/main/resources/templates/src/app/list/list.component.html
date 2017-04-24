@@ -1,0 +1,40 @@
+<div class="container">
+<h4 style="color:blue" align="center"> Employee List</h4>
+<p>
+
+<a [routerLink]="['NewEmployee']"><span class="glyphicon glyphicon-plus"></span> </a>
+
+</p>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+<th> First Name</th>
+<th> Last Name</th>
+<th> Email</th>
+<th> Phone</th>
+<th> Actions</th>
+
+<tr>
+
+</tr>
+</thead>
+
+<tbody>
+<tr *ngFor="let emp of employeeList">
+<td>  {{emp.name}}</td>
+<td>  {{emp.address}}</td>
+<td>  {{emp.city}}</td>
+<td>  {{emp.country}}</td>
+<td>  
+
+<button type="submit" class=" btn btn-warning btn-sm" (click)="update(emp)"> <span class="glyphicon glyphicon-edit"></span></button>
+<button type="submit" class=" btn btn-danger btn-sm" (click)="deleteEmployee(emp)"> <span class="glyphicon glyphicon-trash"></span></button>
+</td>
+</tr>
+
+</tbody>
+
+
+</table>
+</div>

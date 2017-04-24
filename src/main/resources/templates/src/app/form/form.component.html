@@ -1,0 +1,42 @@
+<div class="container">
+<form class="form-horizontal" [formGroup]="employeeForm" (ngSubmit)="submitForm(employeeForm.value)">
+     
+     <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['firstName'].valid && employeeForm.controls['firstName'].touched}">
+        <label >First Name:</label>
+        <input class="form-control" type="text" placeholder="Fist Name" [formControl]="employeeForm.controls['firstName']">
+        <div *ngIf="employeeForm.controls['firstName'].hasError('required') && employeeForm.controls['firstName'].touched" class="alert alert-danger">Please enter a First Name</div>
+      </div>
+         
+      <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['firstName'].valid && employeeForm.controls['lastName'].touched}">
+        <label>Last Name:</label>
+        <input class="form-control" type="text" placeholder="Last Name" [formControl]="employeeForm.controls['lastName']">
+        <div *ngIf="employeeForm.controls['lastName'].hasError('required') && employeeForm.controls['lastName'].touched" class="alert alert-danger">Please enter a Last Name</div>
+      </div>
+      
+      
+      <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['address'].valid && employeeForm.controls['address'].touched}">
+        <label>Address:</label>
+        <input class="form-control" type="text" placeholder="Address" [formControl]="employeeForm.controls['address']">
+        <div *ngIf="employeeForm.controls['address'].hasError('required') && employeeForm.controls['address'].touched" class="alert alert-danger">Please enter an address.</div>
+      </div>
+            
+      <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['email'].valid && employeeForm.controls['email'].touched}">
+        <label>Email :</label>
+        <input class="form-control" type="text" placeholder="Email" [formControl]="employeeForm.controls['email']">
+        <div *ngIf="employeeForm.controls['email'].hasError('required') && employeeForm.controls['email'].touched" class="alert alert-danger">Please enter an email address.</div>
+      </div>
+      
+        
+      <div class="form-group" [ngClass]="{'has-error':!employeeForm.controls['phone'].valid && employeeForm.controls['phone'].touched}">
+        <label>Phone :</label>
+        <input class="form-control" type="text" placeholder="Phone" [formControl]="employeeForm.controls['phone']">
+        <div *ngIf="employeeForm.controls['phone'].hasError('required') && employeeForm.controls['phone'].touched" class="alert alert-danger">Please enter a phone number.</div>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" >Submit</button>
+         <!--   <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">Submit</button> -->
+      </div>
+</form>
+
+</div>
