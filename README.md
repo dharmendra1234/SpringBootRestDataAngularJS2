@@ -1,4 +1,4 @@
-# springboot-crud-demo
+# Springboot- AngularJS 2 Crud-Demo
 
 Spring Boot CRUD demo is demonstrating how to implement simple CRUD operations with a `Customer` entity.
 
